@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Eats — Where Comfort Meets Culture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="showPage('home')">GLOBAL <span>EATS</span></div>
+  <div class="nav-links">
+    <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+    <a onclick="showPage('menu')" id="nav-menu">Menu</a>
+    <a onclick="showPage('checkout')" id="nav-checkout">Checkout</a>
+    <a href="#">About</a>
+  </div>
+  <button class="nav-cart" onclick="showPage('checkout')">
+    🛒 Cart <span class="cart-count" id="cart-count">0</span>
+  </button>
+</nav>
+
+<!-- ==================== HOME PAGE ==================== -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Now Open in San Jose, CA</div>
+      <h1>Where <em>Comfort</em><br>Meets <span class="gold">Culture</span></h1>
+      <p class="hero-sub">Authentic global bowls made fresh — from Indian dal to Japanese teriyaki, every dish honors the traditions it comes from.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('menu')">Order Now</button>
+        <button class="btn-secondary" onclick="document.querySelector('.cuisine-grid').scrollIntoView({behavior:'smooth'})">Explore Cuisines</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="bowl-showcase">
+        <div class="bowl-ring"></div>
+        <div class="bowl-ring"></div>
+        <div class="bowl-center">🍜</div>
+        <div class="orbit-dot">🌿</div>
+        <div class="orbit-dot">🥑</div>
+        <div class="orbit-dot">🌶️</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-num">7+</div><div class="stat-label">Global Cuisines</div></div>
+    <div class="stat-item"><div class="stat-num">21+</div><div class="stat-label">Signature Bowls</div></div>
+    <div class="stat-item"><div class="stat-num">$10–15</div><div class="stat-label">Avg. Price</div></div>
+    <div class="stat-item"><div class="stat-num">< 10 min</div><div class="stat-label">Wait Time</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Authentic Recipes</div></div>
+  </div>
+
+  <section class="section">
+    <div class="section-label">Explore the Menu</div>
+    <h2 class="section-title">A World of Flavor<br>In Every Bowl</h2>
+    <p class="section-sub">Six cultures, countless traditions — all served fast, fresh, and faithful to their origins.</p>
+    <div class="cuisine-grid">
+      <div class="cuisine-card" onclick="showPage('menu')">
+        <div class="cuisine-card-img" style="background:linear-gradient(135deg,#1a3a2a,#2d6b4a)">🍛</div>
+        <div class="cuisine-card-body">
+          <div class="cuisine-card-name">Indian</div>
+          <div class="cuisine-card-desc">Rich curries, aromatic dal, and warming spices from across the subcontinent.</div>
+          <span class="cuisine-card-tag">3 Bowls</span>
+        </div>
+      </div>
+      <div class="cuisine-card" onclick="showPage('menu')">
+        <div class="cuisine-card-img" style="background:linear-gradient(135deg,#1a2a3a,#2a4d6b)">🍱</div>
+        <div class="cuisine-card-body">
+          <div class="cuisine-card-name">Japanese</div>
+          <div class="cuisine-card-desc">Teriyaki, katsu, and umami-rich broths from the land of culinary precision.</div>
+          <span class="cuisine-card-tag">3 Bowls</span>
+        </div>
+      </div>
+      <div class="cuisine-card" onclick="showPage('menu')">
+        <div class="cuisine-card-img" style="background:linear-gradient(135deg,#2a1a1a,#6b2a2a)">🥘</div>
+        <div class="cuisine-card-body">
+          <div class="cuisine-card-name">Mexican</div>
+          <div class="cuisine-card-desc">Bold, vibrant, and deeply layered flavors rooted in centuries of tradition.</div>
+          <span class="cuisine-card-tag">3 Bowls</span>
+        </div>
+      </div>
+      <div class="cuisine-card" onclick="showPage('menu')">
+        <div class="cuisine-card-img" style="background:linear-gradient(135deg,#2a2a1a,#6b6b1a)">🫕</div>
+        <div class="cuisine-card-body">
+          <div class="cuisine-card-name">Mediterranean</div>
+          <div class="cuisine-card-desc">Sun-kissed grains, herbs, and wholesome proteins from the ancient sea.</div>
+          <span class="cuisine-card-tag">3 Bowls</span>
+        </div>
+      </div>
+      <div class="cuisine-card" onclick="showPage('menu')">
+        <div class="cuisine-card-img" style="background:linear-gradient(135deg,#1a2a1a,#2a5c2a)">🍜</div>
+        <div class="cuisine-card-body">
+          <div class="cuisine-card-name">Thai</div>
+          <div class="cuisine-card-desc">Sweet, sour, spicy, and savory — the perfect harmony of Thai flavors.</div>
+          <span class="cuisine-card-tag">3 Bowls</span>
+        </div>
+      </div>
+      <div class="cuisine-card" onclick="showPage('menu')">
+        <div class="cuisine-card-img" style="background:linear-gradient(135deg,#2a1a2a,#5c2a5c)">🥗</div>
+        <div class="cuisine-card-body">
+          <div class="cuisine-card-name">Ethiopian</div>
+          <div class="cuisine-card-desc">Hearty stews and injera-inspired bowls with ancient East African spices.</div>
+          <span class="cuisine-card-tag">3 Bowls</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="section-label">Why Global Eats</div>
+    <h2 class="section-title">Three Pillars of <em>Everything</em> We Do</h2>
+    <p class="section-sub">Every decision we make traces back to these core commitments to you.</p>
+    <div class="features-grid">
+      <div class="feature-block">
+        <div class="feature-icon">🏠</div>
+        <div class="feature-title">Comfort, Always</div>
+        <div class="feature-desc">Whether it's your grandmother's dal or a ramen bowl that takes you back, we serve the emotional familiarity you need — far from home or right in the middle of a hectic day.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">🌍</div>
+        <div class="feature-title">Cultural Authenticity</div>
+        <div class="feature-desc">We don't cut corners. Every bowl is developed from primary recipes, not Americanized approximations. We honor the food, the people, and the stories behind each dish.</div>
+      </div>
+      <div class="feature-block">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Built for Your Life</div>
+        <div class="feature-desc">Portioned for your schedule, priced for your budget, and ready in under 10 minutes. Nutritional info up front. No surprises, just great food on your terms.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">From Click to <em style="color:var(--moss)">Bowl</em> in Minutes</h2>
+    <p class="section-sub">Our streamlined ordering flow reduces wait times, minimizes order errors, and enhances your experience every step of the way.</p>
+
+    <div class="steps-connector">
+      <div class="step-card">
+        <div class="step-bubble">🌐</div>
+        <div class="step-num-label">Step 01</div>
+        <div class="step-title">Visit the Website</div>
+        <div class="step-desc">Browse Global Eats on any device — phone, tablet, or desktop. No app needed.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-bubble">🥗</div>
+        <div class="step-num-label">Step 02</div>
+        <div class="step-title">Browse the Menu</div>
+        <div class="step-desc">Explore every bowl with full ingredient lists, nutritional details, and allergen info.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-bubble">🕐</div>
+        <div class="step-num-label">Step 03</div>
+        <div class="step-title">Select & Schedule</div>
+        <div class="step-desc">Choose your bowl and a pickup time that works for your schedule — no waiting in line.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-bubble">🔒</div>
+        <div class="step-num-label">Step 04</div>
+        <div class="step-title">Pay Securely</div>
+        <div class="step-desc">Payment is processed online via encrypted checkout. Cards, Apple Pay, and Google Pay accepted.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-bubble">📟</div>
+        <div class="step-num-label">Step 05</div>
+        <div class="step-title">Kitchen Gets It Instantly</div>
+        <div class="step-desc">Your order transmits directly to our POS system — no ticket errors, no miscommunication.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-bubble">✅</div>
+        <div class="step-num-label">Step 06</div>
+        <div class="step-title">Ready in ~10 Minutes</div>
+        <div class="step-desc">Your bowl is freshly prepared and waiting. We'll notify you the moment it's ready to grab.</div>
+      </div>
+    </div>
+
+    <div class="loyalty-callout">
+      <div class="loyalty-icon">🏆</div>
+      <div>
+        <h3>Earn Rewards Automatically</h3>
+        <p>Every online order earns loyalty points — no punch cards, no scanning. Rewards are tracked automatically so you can focus on what matters: the food.</p>
+      </div>
+      <div class="loyalty-badge">Join for Free →</div>
+    </div>
+  </section>
+
+
+  <section class="cta-section">
+    <div class="section-label">Get Started</div>
+    <h2 class="section-title" style="text-align:center">Hungry? Your<br>Bowl Awaits.</h2>
+    <p class="section-sub" style="text-align:center">Order pickup or delivery. Real food, real fast, real culture.</p>
+    <button class="btn-primary" style="font-size:1rem;padding:20px 52px;" onclick="showPage('menu')">Browse the Full Menu →</button>
+  </section>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="nav-logo">GLOBAL <span style="color:var(--gold)">EATS</span></span>
+      <p>Where comfort meets culture. Authentic fast-casual global bowls in San Jose, California. Opening July 2026.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <a onclick="showPage('menu')">Indian Bowls</a>
+      <a onclick="showPage('menu')">Japanese Bowls</a>
+      <a onclick="showPage('menu')">Mexican Bowls</a>
+      <a onclick="showPage('menu')">Mediterranean</a>
+      <a onclick="showPage('menu')">Thai Bowls</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a>About Us</a>
+      <a>Our Mission</a>
+      <a>Careers</a>
+      <a>Press</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a>San Jose, CA</a>
+      <a>DoorDash</a>
+      <a>Uber Eats</a>
+      <a>Catering</a>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2026 Global Eats LLC — Lynbrook High School · Brinda Paladugu, Vinitha Nair, Anushka Ramchander</div>
+</div>
+
+<!-- ==================== MENU PAGE ==================== -->
+<div class="page" id="page-menu">
+  <div class="menu-header">
+    <div class="menu-header-bg"></div>
+    <div class="section-label" style="color:var(--mint)">Full Menu</div>
+    <h1>Explore Every <em>Bowl</em></h1>
+    <p>21 signature bowls across 7 global cuisines · San Jose, CA</p>
+  </div>
+
+  <div class="menu-filters">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterMenu('all',this)">All</button>
+    <button class="filter-btn" onclick="filterMenu('popular',this)">⭐ Popular</button>
+    <button class="filter-btn" onclick="filterMenu('vegan',this)">🌱 Vegan</button>
+    <button class="filter-btn" onclick="filterMenu('spicy',this)">🌶️ Spicy</button>
+    <button class="filter-btn" onclick="filterMenu('indian',this)">🍛 Indian</button>
+    <button class="filter-btn" onclick="filterMenu('japanese',this)">🍱 Japanese</button>
+    <button class="filter-btn" onclick="filterMenu('mexican',this)">🥘 Mexican</button>
+    <button class="filter-btn" onclick="filterMenu('mediterranean',this)">🫕 Mediterranean</button>
+    <button class="filter-btn" onclick="filterMenu('thai',this)">🍜 Thai</button>
+    <button class="filter-btn" onclick="filterMenu('ethiopian',this)">🥗 Ethiopian</button>
+  </div>
+
+  <div class="menu-body" id="menu-body"></div>
+</div>
+
+<!-- ==================== CHECKOUT PAGE ==================== -->
+<div class="page" id="page-checkout">
+  <div class="checkout-layout">
+    <div class="checkout-main">
+      <div class="section-label" style="margin-bottom:8px">Checkout</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:2rem;color:var(--forest);margin-bottom:40px">Complete Your <em style="color:var(--moss);font-style:normal">Order</em></h2>
+
+      <!-- Order Type -->
+      <div class="checkout-section">
+        <h3>How would you like your order?</h3>
+        <div class="order-type-toggle">
+          <button class="order-type-btn active" id="btn-pickup" onclick="setOrderType('pickup')">🏃 Pickup · Ready in ~8 min</button>
+          <button class="order-type-btn" id="btn-delivery" onclick="setOrderType('delivery')">🛵 Delivery · ~25–35 min</button>
+        </div>
+        <div id="delivery-address" style="display:none">
+          <div class="form-group">
+            <label>Delivery Address</label>
+            <input type="text" placeholder="123 University Ave, San Jose, CA">
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Apt / Suite</label><input type="text" placeholder="Optional"></div>
+            <div class="form-group"><label>ZIP Code</label><input type="text" placeholder="95112"></div>
+          </div>
+        </div>
+        <div id="pickup-info" style="background:var(--warm);border-radius:8px;padding:16px;font-size:0.85rem;color:var(--moss);font-weight:500;">
+          📍 Pick up at: <strong>Global Eats San Jose · Downtown Location</strong><br>
+          <span style="font-weight:400;color:var(--light-text)">Hours: Mon–Sat 10am–9pm · Sun 11am–7pm</span>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="checkout-section">
+        <h3>Contact Information</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Priya"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Sharma"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(408) 555-0100"></div>
+        </div>
+      </div>
+
+      <!-- Payment -->
+      <div class="checkout-section">
+        <h3>Payment Method</h3>
+        <div class="payment-options">
+          <div class="payment-opt selected" onclick="selectPayment(this)"><div class="payment-opt-icon">💳</div><div class="payment-opt-label">Credit Card</div></div>
+          <div class="payment-opt" onclick="selectPayment(this)"><div class="payment-opt-icon">📱</div><div class="payment-opt-label">Apple Pay</div></div>
+          <div class="payment-opt" onclick="selectPayment(this)"><div class="payment-opt-icon">🏦</div><div class="payment-opt-label">Google Pay</div></div>
+        </div>
+        <div id="card-fields">
+          <div class="form-group"><label>Card Number</label><input type="text" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCard(this)"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY" maxlength="7" oninput="formatExpiry(this)"></div>
+            <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Instructions -->
+      <div class="checkout-section">
+        <h3>Special Instructions</h3>
+        <div class="form-group">
+          <label>Notes for the kitchen (optional)</label>
+          <input type="text" placeholder="e.g. Extra spicy, no onions, allergy info...">
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="checkout-sidebar">
+      <div class="sidebar-title">Your Order</div>
+      <div class="sidebar-sub" id="item-count-label">0 items</div>
+      <div class="cart-items" id="sidebar-cart"></div>
+
+      <div id="cart-summary" style="display:none">
+        <hr class="cart-divider">
+        <div class="cart-line"><span>Subtotal</span><span id="subtotal-val">$0.00</span></div>
+        <div class="cart-line"><span>Tax (9.25%)</span><span id="tax-val">$0.00</span></div>
+        <div class="cart-line" id="delivery-fee-line" style="display:none"><span>Delivery Fee</span><span>$2.99</span></div>
+        <div class="cart-total"><span>Total</span><span id="total-val">$0.00</span></div>
+        <button class="place-order-btn" onclick="placeOrder()">Place Order →</button>
+      </div>
+
+      <div id="empty-cart-msg" class="empty-cart">
+        <div class="empty-cart-icon">🍜</div>
+        <p>Your cart is empty.<br>Browse the menu to add items!</p>
+        <br>
+        <button class="btn-secondary" style="margin-top:8px;font-size:0.8rem;padding:10px 24px;" onclick="showPage('menu')">Browse Menu</button>
+      </div>
+
+      <hr class="cart-divider" style="margin-top:32px">
+      <div class="order-timeline">
+        <div style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--mint);margin-bottom:16px;font-weight:600;">What Happens Next</div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-title">Order Confirmed</div><div class="timeline-time">Instantly after checkout</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-title">Kitchen Starts</div><div class="timeline-time">Within 2 minutes</div></div></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><div class="timeline-title">Ready for Pickup</div><div class="timeline-time">~8 minutes</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Overlay -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-icon">✅</div>
+  <h2>Order Placed!</h2>
+  <p>Your global bowl is being made with love. We'll text you when it's ready.</p>
+  <div class="eta">8 MIN</div>
+  <div class="eta-label">Estimated pickup time</div>
+  <br><br>
+  <button class="btn-primary" onclick="closeSuccess()" style="margin-top:8px">Back to Menu</button>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span id="toast-msg">Added to cart!</span>
+</div>
+
+<script src="script.js"></script>
